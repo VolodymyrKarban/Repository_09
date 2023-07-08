@@ -79,6 +79,7 @@ def bot_assistant(): #bot assistant)))
         if list_command[0] in dict_def.keys():
             dict_def[list_command[0]](list_command)
         elif input_text in list_out:
+            print("Good bye!")
             break
         else:
             not_know()
