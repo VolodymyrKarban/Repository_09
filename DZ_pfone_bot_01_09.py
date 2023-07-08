@@ -32,7 +32,6 @@ def phone(list_input):
         return print("Please enter a space after the command ""phone"" name.")
     str_out = "List of requested contacts " + list_input[1]+":"
     for key, value in phone_book.items():
-        print(key.lower(),"####",list_input[1].lower())
         if key.lower() == list_input[1].lower():
             str_out += "\n"+"Name: "+str(key)+".  Phone number: "+str(value)  
     if str_out == "List of requested contacts:":
