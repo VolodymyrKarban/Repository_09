@@ -27,13 +27,14 @@ def change(list_input):
             phone_book.update({list_input[1]: list_input[2]})
             return print("Contact ",list_input[1],"not found, but i saved his for you.")
     
-
 def phone(list_input):
     if len(list_input)<2:
         return print("Please enter a space after the command ""phone"" name.")
     str_out = "List of requested contacts " + list_input[1]+":"
     for key, value in phone_book.items():
-        str_out += "\n"+"Name: "+str(key)+".  Phone number: "+str(value)  
+        print(key.lower(),"####",list_input[1].lower())
+        if key.lower() == list_input[1].lower():
+            str_out += "\n"+"Name: "+str(key)+".  Phone number: "+str(value)  
     if str_out == "List of requested contacts:":
         str_out = "The requested contact was not found."
     return print(str_out)
